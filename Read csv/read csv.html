@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<title>
+
+    Pyscript : Show Table in Browser
+    
+</title>
+
+ <!-- Pyscript -->
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="df_style.css"/>-->
+    
+    <link rel="stylesheet" type="text/css" href="df_style.css"/>
+
+<!---pyodide--> 
+
+<py-env>
+    - pandas
+</py-env>
+
+</head>
+
+<body>
+    
+   <center> <b>Students Adaptability Level in Online Education</b></center>	
+
+  
+
+    <py-script>
+
+        import pandas as pd 
+
+        from pyodide.http import open_url
+
+        url = open_url("https://raw.githubusercontent.com/aslibaraf/pyscript/main/students_adaptability_level_online_education.csv")
+
+        df = pd.read_csv(url)
+        pyscript.write('data',df.to_html(classes="mystyle"))
+
+    </py-script>
+
+    
+</body>
+    <p id="data"></p>
+</html>

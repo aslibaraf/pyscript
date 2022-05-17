@@ -1,0 +1,35 @@
+.mystyle {
+    margin-left: auto;
+    margin-right: auto;
+     
+   }
+   .mystyle table {
+                   border-collapse: collapse;
+               margin: 0px auto; 
+               
+               }
+               .mystyle th {
+                   background-color:#4a4127;
+                   Color:white;
+               }
+              .mystyle th, td {
+                   width:50px;
+                   text-align:center;
+                   border:1px solid black;
+                   padding:5px;
+                   
+               }
+               
+               .mystyle{
+                   border-right:hidden;
+               }
+               .mystyle {
+                   border-collapse:separate;
+                   border-spacing:0 15px;
+               }
+               .mystyle h1 {
+                   color:green;
+               }
+   body {
+     background-color: #d7e9d1;
+   }			
