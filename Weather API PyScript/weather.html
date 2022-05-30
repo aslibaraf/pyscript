@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+  <head>
+ 
+    <title>Weather API Using PyScript</title>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="11.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking BoxIcon for Icon -->
+    
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width" />
+
+    <div class="container text-center">
+      
+    
+      
+      <div class="main-content text-center">  
+        
+        
+        
+        <div class="weather-data-container">
+          <div class="row pull-right weather-temp-settings">
+            <a id="tMetric"></a><span> | </span><a id="tImperial"></a>
+          </div>
+          <div class="row pull-right weather-data-settings">
+            <div class="col-xs-12">
+           
+              <a class="plain-anchor" href="#"><i class="fa fa-cog fa-2x dropdown dropdown-toggle" data-toggle="collapse" data-target="#man-srch-form"></i></a>
+            
+            </div>
+          </div>
+          
+          <div class="row pull-right weather-app-info">
+            <div class="col-xs-12">
+              <a class="plain-anchor" href="#"><i class="fa fa-info-circle fa-2x dropdown dropdown-toggle" data-toggle="collapse" data-target="#weather-app-info-content-container"></i></a>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-6">     
+              <div class="clockDisplay-container">
+              </div>
+            </div><!---end of col-xs-12-->
+            <div class="col-xs-12 col-md-6 col-lg-6">
+              <div class="curLocationDisp-container">
+                  <div id="weather-data">
+    
+                </div>
+              </div>
+            </div><!---end of col-xs-12-->
+          </div><!---end row 1--->
+          
+          <div class="row">
+            <div class="col-xs-4 col-lg-4">
+              <div>
+                <h4 class="disp-label">Temp</h4>
+                <p id="tempDisplay">°</p>
+              </div>
+            </div><!---end of col-xs-12-->
+            <div class="col-xs-4 col-md-4">
+              <div>
+                <h4 class="disp-label">Humidity</h4>
+                <p id="humidDisplay">N/A</p>
+              </div>
+            </div><!---end of col-xs-12-->
+            <div class="col-xs-4 col-md-4">
+              <div>
+                <h4 class="disp-label">Wind</h4>
+                <p id="windDisplay">N/A</p>
+              </div>
+            </div><!---end of col-xs-12-->
+            
+          </div><!---end row 1--->
+          
+        </div><!--end weather-data-container-->
+        
+      </div><!--end main-content-->
+      
+      
+    <py-script>
+      from pyodide.http import pyfetch
+      import json
+      import asyncio
+      import re
+      response = await pyfetch(url="https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=198700fd07cfb27eb62679f850c5d048", method="GET")
+      cal= str('C')
+      output = f'{await response.json()}'
+      def jj(output):
+      
+        str1 = output.replace("\'", "\"")
+        st= json.loads(str1)
+        
+          
+         
+        return st
+      
+      
+      pyscript.write('tMetric', jj(output)['name'])
+      pyscript.write('tempDisplay', "{} °C".format(round(jj(output)['main']['temp']- 273.15,3)))
+      pyscript.write('tImperial', jj(output)['sys']['country'])
+      pyscript.write('humidDisplay', "{} Humidity".format(jj(output)['main']['humidity']))
+      pyscript.write('windDisplay', "{} Wind Speed".format(jj(output)['wind']['speed']))
+      
+      
+          </py-script>
+    
+  </body>
+</html>

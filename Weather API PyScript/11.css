@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+
+html, body
+{
+  width:100%;
+  height:100%;
+  font-size:14px;
+}
+
+body
+{
+  min-width:335px;
+  width:100%;
+  height:100%;
+  font-family:Montserrat; 
+  color:#e2e9e9;
+  background-color:#b9adad;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size:14px;
+}
+
+@media screen and (min-width: 380px) and(max-width:400px)
+{
+ 
+  #clockDisplay
+  {
+    font-size:65%!important;
+  }
+  
+  .banner, h1
+  {
+    margin:0px auto!important;
+  }
+  
+  .weather-data-container, #man-srch-form
+  {
+    min-width:85%!important;
+  }
+  
+  #nextForecast-container
+  {
+    min-width:80%!impotant;
+  }
+  
+  .main-content
+  {
+    margin:0!important;
+  }
+}
+
+.plain-anchor, .plain-anchor:visited
+{
+  color:white;
+  text-decoration:none;
+}
+
+#man-srch-form
+{
+   margin:10px auto!important;
+   width:67%;
+}
+
+#man-srch-form input
+{
+  border-radius:10px;
+  background:transparent;
+  background-color:rgba(0,0,0,0.3);
+  margin-bottom:5px;
+  color:white;
+}
+
+#man-srch-form button
+{
+  border-radius:10px;
+  background:transparent;
+  background-color:rgba(0,0,0,0.1);
+  color:inherit;
+}
+
+.weather-temp-settings a
+{
+  color:#d7e9ef;
+  text-decoration:none;
+}
+
+.weather-data-container .weather-temp-settings > a:hover
+{
+  color:#5ca4bc;
+}
+
+.toggle.weather
+{ 
+   background:transparent;
+   border-radius:15px; background-color:rgba(0,0,0,0.1)!important;
+}
+
+.dropdown-content
+{
+   text-align:center;
+   padding:10px;
+   color:white;
+   background:transparent;
+   background-color:rgba(0,0,0,0.2);
+   border-radius:15px;
+}
+
+#btnNxtForecast
+{
+  background:transparent!important;
+  border:none!important;
+}
+
+#btnNxtForecast:focus
+{
+  outline:none;
+}
+
+.btnNxtForecast:hover
+{
+  transform:scale(1.1);
+}
+
+#nextForecast-container
+{
+  margin:20px auto;
+  padding:10px;
+  width:65%;
+  border-radius:25px;
+  background:rgba(0,0,0,0.2);
+}
+
+.nxt-forecast-content
+{
+   width:100%;
+   margin:0 auto;
+}
+
+.nxt-forecast-item
+{
+  max-width:100%;
+  margin:0 auto;
+}
+
+.banner
+{
+  margin:50px auto;
+  font-size:1.5em;
+}
+
+.main-content
+{
+  
+  width:100%;
+  height:100%;
+  margin:10px auto;
+  padding:auto;
+}
+
+.weather-data-settings
+{
+  padding:0!important;
+  margin-right:-152px!important;/*OG -80px*/
+  margin-top:-15px!important;/*OG -15px*/
+}
+
+.weather-app-info
+{
+  padding:0!important;
+  margin-right:-152px!important;/*OG -80px*/
+  margin-top:20px!important;
+}
+
+#weather-app-info-content-container
+{
+  margin:10px auto!important;
+  width:70%;
+}
+
+.weather-data-container
+{
+  padding:25px;
+  margin:0 auto!important;
+  width:67%;
+  min-height:200px;
+  color:#f2f2f2;
+  border-radius:25px;
+  border-style:none;
+  background-color:rgba(0,0,0,0.2);
+  
+}
+
+#data-text
+{
+   
+}
+
+.clockDisplay-container
+{
+  margin:0 auto;
+  display:inline-block;
+  float:left;
+  font-size:100px;
+}
+
+#dateDisplay
+{
+  margin:0 auto;
+  font-size:20%;  
+}
+
+#clockDisplay
+{
+  margin:0 auto;
+  font-size:65%;
+}
+
+#clockDisplay:hover
+{
+  transform:scale(1.1);
+}
+
+.curLocationDisp-container
+{
+  float:right; 
+}
+
+.disp-label
+{
+  word-wrap:break-word;
+}
+
+.backdrop-night
+{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: #b9adad; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#0D0333,#301140,#571C3F) fixed; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#0D0333,#301140,#571C3F) fixed; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#0D0333,#301140,#571C3F) fixed; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#0D0333,#26013D,#301140) fixed; /* Standard syntax */
+}
+
+.backdrop-morning
+{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: #b9adad; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#4dc4ff,#ffcc66) fixed; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#4dc4ff,#ffcc66) fixed; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#4dc4ff,#ffcc66) fixed; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#4dc4ff,#ffcc66) fixed; /* Standard syntax */
+}
+
+.backdrop-midday
+{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: #b9adad; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#99ccff,#66b2ff) fixed; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#99ccff,#66b2ff) fixed; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#99ccff,#66b2ff) fixed; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#99ccff,#66b2ff) fixed; /* Standard syntax */
+}
+
+.backdrop-dusk
+{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: #b9adad; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#ff9966, #9966ff) fixed; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ff9966, #9966ff) fixed; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ff9966, #9966ff) fixed; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ff9966, #9966ff) fixed; /* Standard syntax */
+}
+
+.backdrop-dawn
+{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: #b9adad; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#9966ff,#ff9966) fixed; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#9966ff,#ff9966) fixed; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#9966ff,#ff9966) fixed; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#9966ff,#ff9966) fixed; /* Standard syntax */
+}
